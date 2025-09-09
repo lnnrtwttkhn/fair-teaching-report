@@ -19,6 +19,5 @@ The application can be found at <https://lennartwittkuhn.com/fair-teaching-repor
 {{< include _project-information.md >}}
 \newpage
 {{< include _project-description.md >}}
-{{< include cost-justification.qmd >}}
 {{< include _acknowledgements.md >}}
 {{< include references.qmd >}}
