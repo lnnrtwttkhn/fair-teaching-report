@@ -1,4 +1,4 @@
-## Project Description
+## Report
 
 ### Background
 
@@ -8,49 +8,72 @@ The goal of this project was therefore to develop a concrete approach to impleme
 For further details on the background of this project, please see the project proposal at [{{< var links.proposal-link >}}]({{< var links.proposal-link >}}).
 
 \newpage
-### Implementation Plan
+### Project Implementation and Results
 
-::: {.callout-tip title="Overview of implementation plan"}
+::: {.callout-tip title="Overview of the original implementation plan"}
 1. Create a framework (in the form of a manual) for developing open educational resources (OER) in line with FAIR principles using {{< var links.quarto >}} and {{< var links.git >}}
 1. Implement the framework in a concrete course (for example, in a seminar) in winter semester 2024/25
 1. Offer training to teachers at University of Hamburg to implement the framework in their own teaching
 1. Evaluate the impact of the teaching framework using surveys and interviews with teachers and students
+
+For more details on the original implementation plan, please see the [project proposal]({{< var links.proposal-link >}}).
 :::
 
-In the proposed project, we will develop a framework for creating open educational resources (OER) in a transparent, reproducible fashion, in line with FAIR principles [@wilkinson2016] using the open-source software tools {{< var links.quarto >}} and {{< var links.git >}}.
-First, we will develop the framework in the form of a manual with concrete recommendations and templates to implement FAIR and reproducible teaching using Quarto and Git [for preparatory work, see e.g., @plomp2023].
-Next, we will implement this framework in a concrete teaching project (for example, a seminar) at University of Hamburg during the winter semester 2024/25.
-In addition, we will offer research staff at the home institution (Institute of Psychology at University of Hamburg) opportunities to learn about both Quarto and Git, with a specific focus on encouraging attendees to create their own open educational resources (for example, websites, presentations and online surveys).
-This will allow lecturers to implement FAIR principles and reproducibility in their own teaching.
-Finally, we will document and evaluate the approach, also collecting feedback from both students and teachers via online surveys and structured interviews.
-This documentation will result in a set of concrete recommendations for the implementation of FAIR and reproducible teaching materials for reuse by other teachers, lecturers and research institutions.
+::: {.callout-tip title="Overview of actual implementation"}
+- :white_check_mark: We created a framework (in the form of a manual) for developing open educational resources (OER) in line with FAIR principles using {{< var links.quarto >}} and {{< var links.git >}}, available at [{{< var links.manual-link >}}]({{< var links.manual-link >}})
+- :white_check_mark: We implemented the framework in a workshop at the end of the summer semester 2024/25
+- :white_check_mark: We offered training to teachers at University of Hamburg to implement the framework in their own teaching
+- :x: We did not systematically evaluate the impact of the teaching framework (e.g., using surveys and interviews with teachers and students)
 
-Our approach will rely on two technical tools: {{< var links.quarto >}} and {{< var links.git >}} that we will briefly introduce in the following section.
-This proposal was created using Quarto and Git.
+For more details on the original implementation plan, please see the [project proposal]({{< var links.proposal-link >}}).
+:::
 
-{{< var links.quarto >}} is a free and open-source scientific and technical publishing system developed by the open source data science company {{< var links.posit >}} (formerly know as RStudio) and available for all major operating systems (Windows, macOS and Linux).
-Quarto allows to create and publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in various formats like HTML, PDF, MS Word and ePub.
-As a literate programming tool, Quarto can integrate prose with widely used programming languages like Python, R, Julia, and Observable.
-In the context of teaching materials, Quarto may be used to generate course websites, online textbooks and presentations, all within one technical framework.
-In addition, Quarto offers many tools that support accessibility and therefore allow for equitable and inclusive access to educational resources.
-For example, images and icons on Quarto websites can include metadata that make these elements accessible to screen readers.
-Figures created with code can include alternative text and there is code syntax highlighting with accessible color contrast.
-Finally, presentations can play sounds when slides are advanced which makes them more accessible for blind users.
+Overall, the project was implemented largely as planned, with some necessary adjustments.
+Thanks to the funding provided, we were able to hire Mr. Reza Hakimazar, a Master's student in Psychology at the University of Hamburg, as a research assistant ("Wissenschaftliche Hilfskraft") starting on September 1, 2024.
+As originally proposed, we first developed a framework for creating open educational resources (OER) in a transparent and reproducible manner, aligned with the FAIR principles [@wilkinson2016], using the open-source software tools Quarto and Git.
+The framework was formalized in the form of a manual, which includes concrete recommendations and templates to support FAIR and reproducible teaching practices using Quarto and Git [for preparatory work, see e.g., @plomp2023].
+The manual is publicly accessible at [{{< var links.manual-link >}}]({{< var links.manual-link >}}).
+Its development followed our "working-in-the-open" philosophy.
+The entire process was made transparent and can be tracked on GitHub at [{{< var links.manual-github >}}]({{< var links.manual-github >}}).
+Based on this manual, a concept for a workshop was developed to further disseminate the framework and support educators in implementing FAIR teaching practices.
 
-{{< var links.git >}} is a free and open-source distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development.
-Due to its extensive benefits for transparent distributed work on digital objects, Git is increasingly adopted by scientists for research project management and collaborative development of text, code and data.
-Git is arguably the most popular version control system and can be considered a standard tool in the software industry
-Its popularity is evidenced by the 100 million users of the popular repository hosting service GitHub ^[(Source: [Wikipedia](https://en.wikipedia.org/wiki/GitHub))].
-"Version control is an approach to record changes made in a file or set of files over time so that you and your collaborators can track their history, review any changes, and revert or go back to earlier versions" [@turingway2022].
-Version control allows to keep track of changes in a directory on a computer (called a "repository").
-Users can take snapshots (called "commits") of the repository at any time.
-This allows to know the history of changes and understand what was changed when and by whom.
-Further, users can compare commits and go back to any previous state of their repository.
-In addition, Git allows to work on parallel versions (called "branches") and flexibly integrate (or "merge") them.
-Repository hosting services like {{< var links.github >}}, {{< var links.gitlab >}} or {{< var links.codeberg >}} extend the benefits of version control by aspects of collaboration.
-Repositories can be uploaded (or "pushed") to an online repository hosting service (called a "remote") and shared either with a group of trusted collaborators, or made publicly available to anyone.
-This allows several researchers to work on the same files at the same time.
-Others can read, copy, edit and suggest changes.
-By making the repository public, work can be shared openly and transparently.
-Git is a command-line tool and available for all major operating systems (Windows, macOS and Linux).
-In addition, several graphical user interfaces exist and Git is included in many integrated development environments (IDEs) like RStudio and Visual Studio Code.
+We implemented the developed framework in a workshop held at the University of Hamburg at the end of the summer semester 2025.  
+The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, presentations, and online surveys.  
+This enabled teaching staff to apply FAIR principles and reproducible methods in their own instructional materials.
+
+Originally, we also planned to evaluate the effectiveness of the approach by collecting feedback from both students and instructors through online surveys and structured interviews.  
+The resulting documentation was intended to inform a set of concrete recommendations for implementing FAIR and reproducible teaching practices, with the goal of making them reusable by educators and institutions beyond the project team.  
+However, as noted above and further explained below, this part of the project could not be realized within the current funding period.
+
+### Reflection
+
+Overall, the project was implemented largely as planned, with some necessary adjustments.
+In relation to our original project proposal, the following deviations and timeline adjustments occurred:
+
+1. **Change in Project Responsibility**
+Due to a job change, the project's principal investigator transferred responsibility for the project at the end of April 2025 - with the foundation's approval - to the research group leader Prof. Nicolas Schuck.
+Prof. Schuck, together with the research assistant Reza Hakimazar, continued the project and was able to implement it in accordance with the original plan.
+
+2. **Rescheduling of Course Implementation**
+The course, initially planned for the Winter Semester 2024/25, was postponed to the end of the Summer Semester 2025.  
+This shift was necessary, as the original timeline proved overly optimistic.
+In particular, substantial progress could only begin once funding was secured and Mr. Reza Hakimazar started his role as research assistant.
+
+3. **Postponement of Conference Participation**
+We had planned to present initial results at the TURN 2024 conference and allocate part of the project funds for this purpose.
+However, we decided to delay dissemination until a later stage, when the project outcomes would be more mature.
+At the conclusion of the current funding period, it remains unclear to what extent the results will be presented to a broader academic audience.
+
+4. **Evaluation Activities Not Realized**
+Originally, we intended to evaluate the effectiveness of the framework by collecting feedback from both students and instructors through online surveys and structured interviews.
+The insights gathered were meant to support a set of concrete, reusable recommendations for implementing FAIR and reproducible teaching practices.
+Unfortunately, this component could not be realized within the current funding period due to time constraints and shifting priorities.
+
+### Outlook
+
+All materials developed as part of the project will remain openly accessible.
+In line with the principles of FAIR and reproducible teaching, they can be reused, adapted, and extended by others.
+The workshop held at the Institute of Psychology has laid the groundwork for further adoption of these principles by other educators within the institution.
+There is also the potential for the workshop format to be continued and repeated in the future, based on demand and interest.
+We believe that, thanks to the open approach taken throughout the project, the results will have a lasting impact beyond the original funding period.
+The support provided by the funding was essential in enabling the development and dissemination of these sustainable teaching practices.
