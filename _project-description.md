@@ -37,12 +37,12 @@ Its development followed our "working-in-the-open" philosophy.
 The entire process was made transparent and can be tracked on GitHub at [{{< var links.manual-github >}}]({{< var links.manual-github >}}).
 Based on this manual, a concept for a workshop was developed to further disseminate the framework and support educators in implementing FAIR teaching practices.
 
-We implemented the developed framework in a workshop held at the University of Hamburg at the end of the summer semester 2025.  
-The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, presentations, and online surveys.  
+We implemented the developed framework in a workshop held at the University of Hamburg at the end of the summer semester 2025.
+The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, presentations, and online surveys.
 This enabled teaching staff to apply FAIR principles and reproducible methods in their own instructional materials.
 
-Originally, we also planned to evaluate the effectiveness of the approach by collecting feedback from both students and instructors through online surveys and structured interviews.  
-The resulting documentation was intended to inform a set of concrete recommendations for implementing FAIR and reproducible teaching practices, with the goal of making them reusable by educators and institutions beyond the project team.  
+Originally, we also planned to evaluate the effectiveness of the approach by collecting feedback from both students and instructors through online surveys and structured interviews.
+The resulting documentation was intended to inform a set of concrete recommendations for implementing FAIR and reproducible teaching practices, with the goal of making them reusable by educators and institutions beyond the project team.
 However, as noted above and further explained below, this part of the project could not be realized within the current funding period.
 
 ### Reflection
@@ -55,7 +55,7 @@ Due to a job change, the project's principal investigator transferred responsibi
 Prof. Schuck, together with the research assistant Reza Hakimazar, continued the project and was able to implement it in accordance with the original plan.
 
 2. **Rescheduling of Course Implementation**
-The course, initially planned for the Winter Semester 2024/25, was postponed to the end of the Summer Semester 2025.  
+The course, initially planned for the Winter Semester 2024/25, was postponed to the end of the Summer Semester 2025.
 This shift was necessary, as the original timeline proved overly optimistic.
 In particular, substantial progress could only begin once funding was secured and Mr. Reza Hakimazar started his role as research assistant.
 
