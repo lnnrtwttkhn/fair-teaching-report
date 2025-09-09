@@ -2,27 +2,10 @@
 
 ### Background
 
-The main goal of this project is to develop, pilot and document a practical approach to FAIR (findable, accessible, interoperable, reusable), open and reproducible teaching and educational materials.
-
-Science should be open, reproducible and verifiable.
-Yet, investigations across many scientific disciplines have uncovered that this might not be the case for a large proportion of published findings in the scientific literature.
-For example, several studies in the research field of Psychology estimate that more than half of research is not reproducible [@opensciencecollaboration2015; @crüwell2023; @hardwicke2021; @wicherts2006; @obels2020].
-Thus, in an online survey of 1,500 researchers, 90% of the respondents agreed that science faces a "reproducibility crisis" [@baker2016].
-One main reason for this issue of irreproducibility is that materials needed to reproduce the results of a given study (research data, analysis code, software or other materials) are often not accessible, not even "upon (reasonable) request".
-Even if resources are shared, they are often incomplete and do not allow for independent verification or reuse.
-Together, many researchers agree that "[...] accumulated evidence indicates that there is substantial room for improvement with regard to research practices to maximize the efficiency of the research community's use of the public's financial investment." [@munafò2017]
-
-While issues of accessibility and re-usability of research outputs are frequently discussed in the context of research data and analysis code, it is important to note that the same issues also apply to other outputs of academic activity, in particular the preparation and dissemination of teaching materials and other educational resources.
-Teaching activities take up a sizable portion of the working time of researchers.
-In Germany, lecturers at publicly-funded universities are required (by legal ordinances) to fulfill a certain number of teaching hours.
-Thus, a lot of time and expertise is put into the development of teaching materials.
-However, these valuable learning resources are rarely publicly available for public education or as a staring point for further (potentially collaborative) development by other educators.
-
-To address the urgent need to improve infrastructure and academic frameworks supporting the reuse of scholarly data, a diverse consortium of stakeholders in science developed the FAIR Data Principles which state that research outputs should be Findable, Accessible, Interoperable and Reusable [@wilkinson2016].
-Originally developed as guiding principles for scientific data management and stewardship [@wilkinson2016], the FAIR principles are applicable to other types of scientific outputs as well, including teaching materials [see, e.g., @garcia2020].
-While some general recommendations exist on how to make teaching materials FAIR and reproducible [see, e.g., @garcia2020], specific guidelines, practical examples or tools for concrete implementation are scarce.
-
-The goal of this project is to develop a concrete approach to implement the development of FAIR and reproducible teaching materials, pilot this approach in a concrete learning setting at University of Hamburg, as well as evaluate and document the experiences as guidelines for other researchers.
+The main goal of this project was to develop, pilot and document a practical approach to FAIR (findable, accessible, interoperable, reusable), open and reproducible teaching and educational materials.
+In brief, this project addressed the issue that academic educational materials are rarely created and shared in ways that support reproduction, extension, and collaboration, in line with principles of open, FAIR and reproducible science [@wilkinson2016; @garcia2020].
+The goal of this project was therefore to develop a concrete approach to implement the development of FAIR and reproducible teaching materials, pilot this approach in a concrete learning setting at University of Hamburg, as well as evaluate and document the experiences as guidelines for other researchers.
+For further details on the background of this project, please see the project proposal at [{{< var links.proposal-link >}}]({{< var links.proposal-link >}}).
 
 \newpage
 ### Implementation Plan
