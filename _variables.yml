@@ -1,15 +1,15 @@
 project:
-  name: "fair-teaching-proposal"
-  website: "https://lennartwittkuhn.com/{{< var project.name >}}/"
-  github: "https://github.com/lnnrtwttkhn/{{< var project.name >}}"
-  issues: "{{< var project.github >}}/issues"
+  name: "fair-teaching-report"
+  website: "https://lennartwittkuhn.com/fair-teaching-report/"
+  github: "https://github.com/lnnrtwttkhn/fair-teaching-report"
+  issues: "https://github.com/lnnrtwttkhn/fair-teaching-report/issues"
   license-long: "Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))"
   license-short: "[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
   license-badge: "[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)"
   doi: "10.5281/zenodo.8300151"
-  doi-link: "https://doi.org/{{< var project.doi >}}"
+  doi-link: "https://doi.org/10.5281/zenodo.8300151"
   email: "lennart.wittkuhn@uni-hamburg.de"
-  mailto: "mailto:{{< var project.email >}}"
+  mailto: "mailto:lennart.wittkuhn@uni-hamburg.de"
   phone: "+49 (0)40 42838 5346"
 links:
   quarto-link: "https://quarto.org/"
@@ -28,4 +28,9 @@ links:
   posit: "[Posit]({{< var links.posit-link >}})"
   openolat-uhh-link: "https://www.uni-hamburg.de/elearning/werkzeuge/lernplattformen/openolat.html"
   openolat-uhh: "[OpenOlat]({{< var links.openolat-uhh-link >}})"
+  proposal-link: "https://lennartwittkuhn.com/fair-teaching-proposal/"
+  course-link: "https://lennartwittkuhn.com/fair-teaching-course/"
+  vcbook-link: "https://lennartwittkuhn.com/version-control-book/"
+  quarto-docs-link: "https://quarto.org/"
+
   
