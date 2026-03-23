@@ -29,7 +29,8 @@ links:
   openolat-uhh-link: "https://www.uni-hamburg.de/elearning/werkzeuge/lernplattformen/openolat.html"
   openolat-uhh: "[OpenOlat]({{< var links.openolat-uhh-link >}})"
   proposal-link: "https://lennartwittkuhn.com/fair-teaching-proposal/"
-  manual-link: "https://lennartwittkuhn.com/quarto-book/"
-  manual-github: "https://github.com/lnnrtwttkhn/quarto-book/"
+  course-link: "https://lennartwittkuhn.com/fair-teaching-course/"
+  vcbook-link: "https://lennartwittkuhn.com/version-control-book/"
+  quarto-docs-link: "https://quarto.org/"
 
   

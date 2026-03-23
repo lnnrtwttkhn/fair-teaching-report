@@ -20,9 +20,9 @@ For more details on the original implementation plan, please see the [project pr
 :::
 
 ::: {.callout-tip title="Overview of actual implementation"}
-- :white_check_mark: We created a framework (in the form of a manual) for developing open educational resources (OER) in line with FAIR principles using {{< var links.quarto >}} and {{< var links.git >}}, available at [{{< var links.manual-link >}}]({{< var links.manual-link >}})
-- :white_check_mark: We implemented the framework in a workshop at the end of the summer semester 2024/25
-- :white_check_mark: We offered training to teachers at University of Hamburg to implement the framework in their own teaching
+- :white_check_mark: We developed a framework for FAIR and reproducible teaching using {{< var links.quarto >}} and {{< var links.git >}}, building on and extending existing documentation resources
+- :white_check_mark: We created workshop materials implementing the framework, publicly available at [{{< var links.course-link >}}]({{< var links.course-link >}})
+- :white_check_mark: We offered a full-day training workshop to research staff at University of Hamburg to implement the framework in their own teaching
 - :x: We did not systematically evaluate the impact of the teaching framework (e.g., using surveys and interviews with teachers and students)
 
 For more details on the original implementation plan, please see the [project proposal]({{< var links.proposal-link >}}).
@@ -31,14 +31,16 @@ For more details on the original implementation plan, please see the [project pr
 Overall, the project was implemented largely as planned, with some necessary adjustments.
 Thanks to the funding provided, we were able to hire Mr. Reza Hakimazar, a Master's student in Psychology at the University of Hamburg, as a research assistant ("Wissenschaftliche Hilfskraft") starting on September 1, 2024.
 As originally proposed, we first developed a framework for creating open educational resources (OER) in a transparent and reproducible manner, aligned with the FAIR principles [@wilkinson2016], using the open-source software tools Quarto and Git.
-The framework was formalized in the form of a manual, which includes concrete recommendations and templates to support FAIR and reproducible teaching practices using Quarto and Git [for preparatory work, see e.g., @plomp2023].
-The manual is publicly accessible at [{{< var links.manual-link >}}]({{< var links.manual-link >}}).
-Its development followed our "working-in-the-open" philosophy.
-The entire process was made transparent and can be tracked on GitHub at [{{< var links.manual-github >}}]({{< var links.manual-github >}}).
-Based on this manual, a concept for a workshop was developed to further disseminate the framework and support educators in implementing FAIR teaching practices.
 
-We implemented the developed framework in a workshop held at the University of Hamburg at the end of the summer semester 2025.
-The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, presentations, and online surveys.
+Regarding the framework documentation, we started with but eventually decided against creating a new standalone manual and instead focused our efforts on building upon two already extensive and high-quality existing resources: the official [Quarto documentation]({{< var links.quarto-docs-link >}}) and the [Version Control Book]({{< var links.vcbook-link >}}), an open educational resource on Git developed within our research group [for preparatory work, see e.g., @plomp2023].
+This decision reflected a commitment to avoiding duplication of effort and ensuring that our contributions would improve existing resources.
+This approach is actually in line with the very principles of FAIR and reproducible science, which emphasize building upon and contributing to existing resources rather than creating isolated, redundant materials.
+We then focused on developing concrete workshop materials that implemented the framework, which were designed to be openly accessible and reusable by others.
+The resulting workshop materials are publicly accessible at [{{< var links.course-link >}}]({{< var links.course-link >}}).
+Their development followed our "working-in-the-open" philosophy, with the entire process made transparent and trackable on GitHub.
+
+We implemented the developed framework in a full-day workshop held at the University of Hamburg at the end of the winter semester 2025/26.
+The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, and presentations.
 This enabled teaching staff to apply FAIR principles and reproducible methods in their own instructional materials.
 
 Originally, we also planned to evaluate the effectiveness of the approach by collecting feedback from both students and instructors through online surveys and structured interviews.
@@ -50,29 +52,34 @@ However, as noted above and further explained below, this part of the project co
 Overall, the project was implemented largely as planned, with some necessary adjustments.
 In relation to our original project proposal, the following deviations and timeline adjustments occurred:
 
-1. **Change in Project Responsibility**
+1. **Change in Project Responsibility:**
 Due to a job change, the project's principal investigator transferred responsibility for the project at the end of April 2025 - with the foundation's approval - to the research group leader Prof. Nicolas Schuck.
-Prof. Schuck, together with the research assistant Reza Hakimazar, continued the project and was able to implement it in accordance with the original plan.
 
-2. **Rescheduling of Course Implementation**
-The course, initially planned for the Winter Semester 2024/25, was postponed to the end of the Summer Semester 2025.
-This shift was necessary, as the original timeline proved overly optimistic.
+2. **Rescheduling of Workshop:**
+The workshop, initially planned for the Winter Semester 2024/25, was postponed to the end of the Winter Semester 2025/26.
+This shift was necessary due to the change in project leadership and because the original timeline proved overly optimistic.
 In particular, substantial progress could only begin once funding was secured and Mr. Reza Hakimazar started his role as research assistant.
 
-3. **Postponement of Conference Participation**
+3. **Scope Adjustment: Framework Documentation:**
+Rather than developing a new standalone manual, we chose to extend and build upon existing, well-established resources — the Quarto documentation and the Version Control Book.
+This decision allowed us to invest our efforts more effectively, avoid duplication, and contribute to existing resources.
+
+4. **Postponement of Conference Participation**
 We had planned to present initial results at the TURN 2024 conference and allocate part of the project funds for this purpose.
 However, we decided to delay dissemination until a later stage, when the project outcomes would be more mature.
-At the conclusion of the current funding period, it remains unclear to what extent the results will be presented to a broader academic audience.
+At the conclusion of the current funding period, it remains unclear to what extent the results will be presented to a broader academic audience, beyond the public sharing of the workshop materials.
 
-4. **Evaluation Activities Not Realized**
+5. **Evaluation Activities Not Realized**
 Originally, we intended to evaluate the effectiveness of the framework by collecting feedback from both students and instructors through online surveys and structured interviews.
 The insights gathered were meant to support a set of concrete, reusable recommendations for implementing FAIR and reproducible teaching practices.
-Unfortunately, this component could not be realized within the current funding period due to time constraints and shifting priorities.
+Unfortunately, this component could not be realized within the current funding period due to time constraints.
+In particular, it was not possible during the project period to follow up on whether workshop participants subsequently implemented the taught practices in their own teaching.
 
 ### Outlook
 
 All materials developed as part of the project will remain openly accessible.
 In line with the principles of FAIR and reproducible teaching, they can be reused, adapted, and extended by others.
+The workshop materials are freely available at [{{< var links.course-link >}}]({{< var links.course-link >}}), and the Version Control Book — extended as part of this project — continues to be openly accessible at [{{< var links.vcbook-link >}}]({{< var links.vcbook-link >}}).
 The workshop held at the Institute of Psychology has laid the groundwork for further adoption of these principles by other educators within the institution.
 There is also the potential for the workshop format to be continued and repeated in the future, based on demand and interest.
 We believe that, thanks to the open approach taken throughout the project, the results will have a lasting impact beyond the original funding period.
