@@ -2,15 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr.&nbsp;Lennart Wittkuhn">
-<meta name="dcterms.date" content="2025-09-09">
+<meta name="author" content="Reza Hakimazar">
+<meta name="author" content="Prof.&nbsp;Dr.&nbsp;Nicolas W. Schuck">
+<meta name="dcterms.date" content="2026-03-23">
 
 <title>Implementing FAIR and reproducible teaching</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -57,12 +62,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-437f30c51863257f6a0e3763259ee6fb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ff73747157bea4a22cb1ab1a769f836e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee1a5455c32f7ba2d3a072fceb3f4052.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f5fbd47a99a78c4953b9486a93a6349d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,17 +111,12 @@ div.csl-indent {
    
   <ul>
   <li><a href="#project-information" id="toc-project-information" class="nav-link active" data-scroll-target="#project-information">Project Information</a></li>
-  <li><a href="#project-description" id="toc-project-description" class="nav-link" data-scroll-target="#project-description">Project Description</a>
+  <li><a href="#report" id="toc-report" class="nav-link" data-scroll-target="#report">Report</a>
   <ul class="collapse">
   <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#implementation-plan" id="toc-implementation-plan" class="nav-link" data-scroll-target="#implementation-plan">Implementation Plan</a></li>
-  </ul></li>
-  <li><a href="#description-of-the-situation-and-equipment-of-the-university" id="toc-description-of-the-situation-and-equipment-of-the-university" class="nav-link" data-scroll-target="#description-of-the-situation-and-equipment-of-the-university">Description of the situation and equipment of the university</a></li>
-  <li><a href="#target-group" id="toc-target-group" class="nav-link" data-scroll-target="#target-group">Target group</a></li>
-  <li><a href="#financial-needs" id="toc-financial-needs" class="nav-link" data-scroll-target="#financial-needs">Financial Needs</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#justification" id="toc-justification" class="nav-link" data-scroll-target="#justification">Justification</a></li>
+  <li><a href="#project-implementation-and-results" id="toc-project-implementation-and-results" class="nav-link" data-scroll-target="#project-implementation-and-results">Project Implementation and Results</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#outlook" id="toc-outlook" class="nav-link" data-scroll-target="#outlook">Outlook</a></li>
   </ul></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -130,17 +128,37 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Implementing FAIR and reproducible teaching</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/fair-teaching-proposal"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead"></p><p>Application for the “Claussen-Simon-Fonds für Wissenschaft &amp; Hochschule”</p><p></p>
+<div class="quarto-title-block"><div><h1 class="title">Implementing FAIR and reproducible teaching</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/lnnrtwttkhn/fair-teaching-report"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Final report for the “Claussen-Simon-Fonds für Wissenschaft &amp; Hochschule”</p>
 </div>
 
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Authors</div>
   <div class="quarto-title-meta-heading">Affiliations</div>
   
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://lennartwittkuhn.com/">Dr.&nbsp;Lennart Wittkuhn</a> <a href="mailto:lennart.wittkuhn@uni-hamburg.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-2966-6888" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.psy.uni-hamburg.de/en.html">
+            Institute of Psychology, University of Hamburg, Germany
+            </a>
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://rezahakimazar.github.io/">Reza Hakimazar</a> <a href="mailto:reza.hakimazar@uni-hamburg.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://www.psy.uni-hamburg.de/en.html">
+            Institute of Psychology, University of Hamburg, Germany
+            </a>
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://schucklab.gitlab.io/">Prof.&nbsp;Dr.&nbsp;Nicolas W. Schuck</a> <a href="mailto:nicolas.schuck@uni-hamburg.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-0150-8776" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -157,7 +175,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 9, 2025</p>
+      <p class="date">March 23, 2026</p>
     </div>
   </div>
   
@@ -175,11 +193,11 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-About this document
+<span class="screen-reader-only">Note</span>About this document
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is an application for the <a href="https://www.claussen-simon-stiftung.de/de/wissenschaft-hochschule/claussen-simon-fonds-wissenschaft-hochschule/">Claussen-Simon-Fonds für Wissenschaft &amp; Hochschule</a>. An online version of this application is available at <a href="https://lennartwittkuhn.com//">https://lennartwittkuhn.com/fair-teaching-proposal/</a>. <!-- A PDF version of this application is archived on Zenodo at [https://doi.org/](https://doi.org/). --> The contents of this proposal are available under a <a href="Creative Commons Attribution 4.0 International (CC BY 4.0)">Creative Commons Attribution 4.0 International (<span>CC BY 4.0</span>)</a> license and were developed using <a href="{{< var links.quarto-link >}}">Quarto</a> and <a href="{{< var links.git-link >}}">Git</a>. The source code of this application is available on GitHub at <a href="https://github.com/lnnrtwttkhn/">https://github.com/lnnrtwttkhn/fair-teaching-proposal</a>. For questions, feedback or any other comments, please open an issue on GitHub at <a href="./issues">https://github.com/lnnrtwttkhn/fair-teaching-proposal/issues</a> or send an email to <a href="mailto:">lennart.wittkuhn@uni-hamburg.de</a>.</p>
+<p>This is the final report for the project “Implementing FAIR and reproducible teaching”, supported by the <a href="https://www.claussen-simon-stiftung.de/de/wissenschaft-hochschule/claussen-simon-fonds-wissenschaft-hochschule/">Claussen-Simon-Fonds für Wissenschaft &amp; Hochschule</a>. An online version of this report is available at <a href="https://lennartwittkuhn.com/fair-teaching-report/">https://lennartwittkuhn.com/fair-teaching-report/</a>. <!-- A PDF version of this application is archived on Zenodo at [https://doi.org/10.5281/zenodo.8300151](https://doi.org/10.5281/zenodo.8300151). --> The contents of this report are available under a <a href="Creative Commons Attribution 4.0 International (CC BY 4.0)">Creative Commons Attribution 4.0 International (<span>CC BY 4.0</span>)</a> license and were developed using <a href="{{< var links.quarto-link >}}">Quarto</a> and <a href="{{< var links.git-link >}}">Git</a>. The source code of this application is available on GitHub at <a href="https://github.com/lnnrtwttkhn/fair-teaching-report">https://github.com/lnnrtwttkhn/fair-teaching-report</a>. For questions, feedback or any other comments, please open an issue on GitHub at <a href="https://github.com/lnnrtwttkhn/fair-teaching-report/issues">https://github.com/lnnrtwttkhn/fair-teaching-report/issues</a> or send an email to <a href="mailto:lennart.wittkuhn@uni-hamburg.de">lennart.wittkuhn@uni-hamburg.de</a>. The application can be found at <a href="https://lennartwittkuhn.com/fair-teaching-report/" class="uri">https://lennartwittkuhn.com/fair-teaching-report/</a>.</p>
 </div>
 </div>
 <section id="project-information" class="level2">
@@ -188,31 +206,25 @@ About this document
 <li><strong>Institution:</strong> University of Hamburg, Faculty of Psychology and Human Movement Science, Institute of Psychology, Department for “Cognitive Neuroscience of Learning and Change”</li>
 <li><strong>Address:</strong> Von-Melle-Park 5, 20146 Hamburg</li>
 <li><strong>Applicant:</strong> Dr.&nbsp;Lennart Wittkuhn, Postdoctoral Researcher</li>
-<li><strong>Contact:</strong> <a href="mailto:">lennart.wittkuhn@uni-hamburg.de</a>, +49 (0)40 42838 5346</li>
+<li><strong>Contact:</strong> <a href="mailto:lennart.wittkuhn@uni-hamburg.de">lennart.wittkuhn@uni-hamburg.de</a>, +49 (0)40 42838 5346</li>
 </ul>
 <p>The dean’s office of the Faculty of Psychology and Human Movement Science at University of Hamburg was informed about this application and supports the proposal. Proof can be provided upon request. For any inquiries, please contact <a href="mailto:dekanatsassistenz.pb@uni-hamburg.de">dekanatsassistenz.pb@uni-hamburg.de</a>.</p>
-<div style="page-break-after: always;"></div>
 </section>
-<section id="project-description" class="level2">
-<h2 class="anchored" data-anchor-id="project-description">Project Description</h2>
+<section id="report" class="level2">
+<h2 class="anchored" data-anchor-id="report">Report</h2>
 <section id="background" class="level3">
 <h3 class="anchored" data-anchor-id="background">Background</h3>
-<p>The main goal of this project is to develop, pilot and document a practical approach to FAIR (findable, accessible, interoperable, reusable), open and reproducible teaching and educational materials.</p>
-<p>Science should be open, reproducible and verifiable. Yet, investigations across many scientific disciplines have uncovered that this might not be the case for a large proportion of published findings in the scientific literature. For example, several studies in the research field of Psychology estimate that more than half of research is not reproducible <span class="citation" data-cites="opensciencecollaboration2015 crüwell2023 hardwicke2021 wicherts2006 obels2020">(<a href="#ref-crüwell2023" role="doc-biblioref">Crüwell et al., 2023</a>; <a href="#ref-hardwicke2021" role="doc-biblioref">Hardwicke et al., 2021</a>; <a href="#ref-obels2020" role="doc-biblioref">Obels et al., 2020</a>; <a href="#ref-opensciencecollaboration2015" role="doc-biblioref">Open Science Collaboration, 2015</a>; <a href="#ref-wicherts2006" role="doc-biblioref">Wicherts et al., 2006</a>)</span>. Thus, in an online survey of 1,500 researchers, 90% of the respondents agreed that science faces a “reproducibility crisis” <span class="citation" data-cites="baker2016">(<a href="#ref-baker2016" role="doc-biblioref">Baker, 2016</a>)</span>. One main reason for this issue of irreproducibility is that materials needed to reproduce the results of a given study (research data, analysis code, software or other materials) are often not accessible, not even “upon (reasonable) request”. Even if resources are shared, they are often incomplete and do not allow for independent verification or reuse. Together, many researchers agree that “[…] accumulated evidence indicates that there is substantial room for improvement with regard to research practices to maximize the efficiency of the research community’s use of the public’s financial investment.” <span class="citation" data-cites="munafò2017">(<a href="#ref-munafò2017" role="doc-biblioref">Munafò et al., 2017</a>)</span></p>
-<p>While issues of accessibility and re-usability of research outputs are frequently discussed in the context of research data and analysis code, it is important to note that the same issues also apply to other outputs of academic activity, in particular the preparation and dissemination of teaching materials and other educational resources. Teaching activities take up a sizable portion of the working time of researchers. In Germany, lecturers at publicly-funded universities are required (by legal ordinances) to fulfill a certain number of teaching hours. Thus, a lot of time and expertise is put into the development of teaching materials. However, these valuable learning resources are rarely publicly available for public education or as a staring point for further (potentially collaborative) development by other educators.</p>
-<p>To address the urgent need to improve infrastructure and academic frameworks supporting the reuse of scholarly data, a diverse consortium of stakeholders in science developed the FAIR Data Principles which state that research outputs should be Findable, Accessible, Interoperable and Reusable <span class="citation" data-cites="wilkinson2016">(<a href="#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al., 2016</a>)</span>. Originally developed as guiding principles for scientific data management and stewardship <span class="citation" data-cites="wilkinson2016">(<a href="#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al., 2016</a>)</span>, the FAIR principles are applicable to other types of scientific outputs as well, including teaching materials <span class="citation" data-cites="garcia2020">(see, e.g., <a href="#ref-garcia2020" role="doc-biblioref">Garcia et al., 2020</a>)</span>. While some general recommendations exist on how to make teaching materials FAIR and reproducible <span class="citation" data-cites="garcia2020">(see, e.g., <a href="#ref-garcia2020" role="doc-biblioref">Garcia et al., 2020</a>)</span>, specific guidelines, practical examples or tools for concrete implementation are scarce.</p>
-<p>The goal of this project is to develop a concrete approach to implement the development of FAIR and reproducible teaching materials, pilot this approach in a concrete learning setting at University of Hamburg, as well as evaluate and document the experiences as guidelines for other researchers.</p>
-<div style="page-break-after: always;"></div>
+<p>The main goal of this project was to develop, pilot and document a practical approach to FAIR (findable, accessible, interoperable, reusable), open and reproducible teaching and educational materials. In brief, this project addressed the issue that academic educational materials are rarely created and shared in ways that support reproduction, extension, and collaboration, in line with principles of open, FAIR and reproducible science <span class="citation" data-cites="wilkinson2016 garcia2020">(<a href="#ref-garcia2020" role="doc-biblioref">Garcia et al., 2020</a>; <a href="#ref-wilkinson2016" role="doc-biblioref"><span class="nocase">Wilkinson et al.</span>, 2016</a>)</span>. The goal of this project was therefore to develop a concrete approach to implement the development of FAIR and reproducible teaching materials, pilot this approach in a concrete learning setting at University of Hamburg, as well as evaluate and document the experiences as guidelines for other researchers. For further details on the background of this project, please see the project proposal at <a href="https://lennartwittkuhn.com/fair-teaching-proposal/">https://lennartwittkuhn.com/fair-teaching-proposal/</a>.</p>
 </section>
-<section id="implementation-plan" class="level3">
-<h3 class="anchored" data-anchor-id="implementation-plan">Implementation Plan</h3>
-<div class="callout callout-style-default callout-tip callout-titled" title="Overview of implementation plan">
+<section id="project-implementation-and-results" class="level3">
+<h3 class="anchored" data-anchor-id="project-implementation-and-results">Project Implementation and Results</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Overview of the original implementation plan">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Overview of implementation plan
+<span class="screen-reader-only">Tip</span>Overview of the original implementation plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -222,121 +234,52 @@ Overview of implementation plan
 <li>Offer training to teachers at University of Hamburg to implement the framework in their own teaching</li>
 <li>Evaluate the impact of the teaching framework using surveys and interviews with teachers and students</li>
 </ol>
+<p>For more details on the original implementation plan, please see the <a href="https://lennartwittkuhn.com/fair-teaching-proposal/">project proposal</a>.</p>
 </div>
 </div>
-<p>In the proposed project, we will develop a framework for creating open educational resources (OER) in a transparent, reproducible fashion, in line with FAIR principles <span class="citation" data-cites="wilkinson2016">(<a href="#ref-wilkinson2016" role="doc-biblioref">Wilkinson et al., 2016</a>)</span> using the open-source software tools <a href="{{< var links.quarto-link >}}">Quarto</a> and <a href="{{< var links.git-link >}}">Git</a>. First, we will develop the framework in the form of a manual with concrete recommendations and templates to implement FAIR and reproducible teaching using Quarto and Git <span class="citation" data-cites="plomp2023">(for preparatory work, see e.g., <a href="#ref-plomp2023" role="doc-biblioref">Plomp &amp; Wittkuhn, 2023</a>)</span>. Next, we will implement this framework in a concrete teaching project (for example, a seminar) at University of Hamburg during the winter semester 2024/25. In addition, we will offer research staff at the home institution (Institute of Psychology at University of Hamburg) opportunities to learn about both Quarto and Git, with a specific focus on encouraging attendees to create their own open educational resources (for example, websites, presentations and online surveys). This will allow lecturers to implement FAIR principles and reproducibility in their own teaching. Finally, we will document and evaluate the approach, also collecting feedback from both students and teachers via online surveys and structured interviews. This documentation will result in a set of concrete recommendations for the implementation of FAIR and reproducible teaching materials for reuse by other teachers, lecturers and research institutions.</p>
-<p>Our approach will rely on two technical tools: <a href="{{< var links.quarto-link >}}">Quarto</a> and <a href="{{< var links.git-link >}}">Git</a> that we will briefly introduce in the following section. This proposal was created using Quarto and Git.</p>
-<p><a href="{{< var links.quarto-link >}}">Quarto</a> is a free and open-source scientific and technical publishing system developed by the open source data science company <a href="{{< var links.posit-link >}}">Posit</a> (formerly know as RStudio) and available for all major operating systems (Windows, macOS and Linux). Quarto allows to create and publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in various formats like HTML, PDF, MS Word and ePub. As a literate programming tool, Quarto can integrate prose with widely used programming languages like Python, R, Julia, and Observable. In the context of teaching materials, Quarto may be used to generate course websites, online textbooks and presentations, all within one technical framework. In addition, Quarto offers many tools that support accessibility and therefore allow for equitable and inclusive access to educational resources. For example, images and icons on Quarto websites can include metadata that make these elements accessible to screen readers. Figures created with code can include alternative text and there is code syntax highlighting with accessible color contrast. Finally, presentations can play sounds when slides are advanced which makes them more accessible for blind users.</p>
-<p><a href="{{< var links.git-link >}}">Git</a> is a free and open-source distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers who are collaboratively developing source code during software development. Due to its extensive benefits for transparent distributed work on digital objects, Git is increasingly adopted by scientists for research project management and collaborative development of text, code and data. Git is arguably the most popular version control system and can be considered a standard tool in the software industry Its popularity is evidenced by the 100 million users of the popular repository hosting service GitHub <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. “Version control is an approach to record changes made in a file or set of files over time so that you and your collaborators can track their history, review any changes, and revert or go back to earlier versions” <span class="citation" data-cites="turingway2022">(<a href="#ref-turingway2022" role="doc-biblioref">The Turing Way Community, 2022</a>)</span>. Version control allows to keep track of changes in a directory on a computer (called a “repository”). Users can take snapshots (called “commits”) of the repository at any time. This allows to know the history of changes and understand what was changed when and by whom. Further, users can compare commits and go back to any previous state of their repository. In addition, Git allows to work on parallel versions (called “branches”) and flexibly integrate (or “merge”) them. Repository hosting services like <a href="{{< var links.github-link >}}">GitHub</a>, <a href="{{< var links.gitlab-link >}}">GitLab</a> or <a href="{{< var links.codeberg-link >}}">Codeberg</a> extend the benefits of version control by aspects of collaboration. Repositories can be uploaded (or “pushed”) to an online repository hosting service (called a “remote”) and shared either with a group of trusted collaborators, or made publicly available to anyone. This allows several researchers to work on the same files at the same time. Others can read, copy, edit and suggest changes. By making the repository public, work can be shared openly and transparently. Git is a command-line tool and available for all major operating systems (Windows, macOS and Linux). In addition, several graphical user interfaces exist and Git is included in many integrated development environments (IDEs) like RStudio and Visual Studio Code.</p>
-</section>
-</section>
-<section id="description-of-the-situation-and-equipment-of-the-university" class="level2">
-<h2 class="anchored" data-anchor-id="description-of-the-situation-and-equipment-of-the-university">Description of the situation and equipment of the university</h2>
-<p>Teaching is a central pillar of any university and in particular at the University of Hamburg with its motto: “Der Forschung, Der Lehre, Der Bildung” (“To research, to teach, to educate and form”). In winter semester 2022/2023, more than 40,000 students (including doctoral students and students on academic leave) were enrolled at University of Hamburg in 75 bachelor’s programs and 89 master’s programs (for details, see <a href="https://www.uni-hamburg.de/en/uhh/profil/fakten.html">facts and figures on the university homepage</a>). Evidently, this means that this involves a lot of teaching and therefore time that is spent to create learning resources. The University of Hamburg provides platforms that support the development and distribution of teaching materials within the university.</p>
-<p>Since 2009, the University of Hamburg uses <a href="{{< var links.openolat-uhh-link >}}">OpenOlat</a>, a teaching and learning platform for comprehensive eLearning courses. OpenOlat is the teaching and learning platform for comprehensive digital teaching offerings. The platform supports university teacher in daily tasks and workflows with tools for information provision, event organization and communication. It is particularly suitable for supplementing courses with a wide range of learning and exercise materials and for using digital examination formats.</p>
-<p>To examine, the effectiveness of OpenOlat for the implementation of FAIR principles and reproducibility, we considered all entries assigned to the Institute of Psychology at the Department for Psychology and Human Movement Science. At the time of writing this proposal, for this institution OpenOlat listed 21 entries in total (see <a href="#fig-open-olat" class="quarto-xref">Figure&nbsp;1</a>). Of these 21 entries, 8 entries (ca. 40%) included relevant metadata, like the semester when the course took place. Strikingly, only 2 of 21 (ca. 10%) of the learning resources were available without access limitations (for example, password protection with an access code, indicated by the <i class="fa-solid fa-key" aria-label="key"></i> icon). While it is possible that different users get access to different resources (for example, students might have access to more learning resources than staff), it is probably fair to say to say that only a minority of OpenOlat learning resources are readily available for reuse and extension. In this example, those materials that are available are typically slides in PDF format. While the accessibility of <em>some</em> of the learning resources is better than <em>none</em> of them, opportunities for easy reuse and extensions are limited with PDF format. Together, this example illustrates the broader point made in the project background that learning resources are not readily available and if they are available, come in formats that are limited with respect to reuse and extension.</p>
-<div id="fig-open-olat" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-open-olat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/open-olat-screenshot.png" class="img-fluid figure-img">
+<div class="callout callout-style-default callout-tip callout-titled" title="Overview of actual implementation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-open-olat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Screenshot of the OpenOlat portal when filtering for educational resources assigned to the Institute of Psychology at University of Hamburg
-</figcaption>
-</figure>
-</div>
-<p>Another infrastructure offered by University of Hamburg is a search portal for teaching called “Lehre-Navi” (<a href="https://www.uni-hamburg.de/lehre-navi.html" class="uri">https://www.uni-hamburg.de/lehre-navi.html</a>). The “Lehre-Navi” portal was designed by the DUTy (Digital University Teaching Literacy) team in the “Digital and Data Literacy in Teaching Lab” (DDLitLab) project at University of Hamburg, but is largely based on the material and services already provided elsewhere at the university. These offerings - as well as general information for teachers - are brought together on the Lehre-Navi platform. Again, while this platform offers a great diversity of open learning resources, from technical instructions and text to audio and video recordings, these materials do not offer mechanisms to effectively reuse and extend the materials.</p>
-<p>Importantly, both these infrastructures (OpenOlat and Lehre-Navi) do not offer a systematic way to support collaborative development of learning resources. While OpenOlat allows to synchronize collaborative work in office tools using OnlyOffice, this limits teaching formats to office formats similar to Word, Powerpoint and Excel, which are widely used but proprietary programs. A core advantage of the proposed approach is that it is at the same time fully independent from institutional infrastructure and can therefore be easily transferred between institutions while also being easy to integrate with existing university infrastructure. As briefly described in the <a href="#project-description">project description</a>, the tools proposed for our approach, Quarto and Git, are free to use, open source and available for all major operating systems (Windows, macOS, Linux). They are easy to install and there is extensive documentation on their use online. In addition, the applicant is experienced in teaching these tools (for Git, see for example: <a href="https://lennartwittkuhn.com/version-control-course-uhh-ss24/" class="uri">https://lennartwittkuhn.com/version-control-course-uhh-ss24/</a>; for Quarto, see for example: <a href="https://lennartwittkuhn.com/quarto-workshop/" class="uri">https://lennartwittkuhn.com/quarto-workshop/</a>). To share contents tracked with Git with others, a Git repository hosting service like <a href="{{< var links.github-link >}}">GitHub</a> or <a href="{{< var links.gitlab-link >}}">GitLab</a> is needed. While platforms like <a href="{{< var links.github-link >}}">GitHub</a> offer more than enough functionality for the free development of content on their platform, it is relevant to consider that these services are offered by for-profit companies (here, Microsoft) that could change access to resources or their pricing policy in way that disadvantages researchers. Here, the University of Hamburg offers an instance of the Git repository hosting platform GitLab (see <a href="https://gitlab.rrz.uni-hamburg.de/users/sign_in">https://gitlab.rrz.uni-hamburg.de/users/sign_in</a>). Together, the tools at the center of our proposed approach are readily available to researcher and can be easily integrated with existing infrastructure provided by the University of Hamburg. Finally, the proposal fruitfully links up to the university’s ambitious <a href="https://www.kus.uni-hamburg.de/en/themen/digitalisierung-it/digitalstrategie.html">digital strategy</a> that aims to drive digitalization in research and teaching.</p>
-</section>
-<section id="target-group" class="level2">
-<h2 class="anchored" data-anchor-id="target-group">Target group</h2>
-<p>There are two main target groups of the proposed project: research staff and students.</p>
-<p>One main target group of the project are research staff at the Institute of Psychology at the University of Hamburg who are involved in teaching. Our project aims to develop and pilot a new approach to the development of teaching materials. As described in the <a href="#implementation-plan">implementation plan</a>, we plan to involve research staff in the following way: First, we will offer workshops on how to create FAIR and reproducible teaching materials using Quarto and Git. Second, we will support teaching research staff in the implementation of the proposed approach in their teaching. Third, we will conduct surveys and structured interviews with research staff to evaluate our novel teaching approach and identify potential pitfalls and further opportunities for improvement.</p>
-<p>The second main target group are MSc and PhD students at the Institute of Psychology at the University of Hamburg. In particular, the Master of Science in Psychology is a new consecutive program that is international and strongly research-oriented. Extensive methodological and statistical skills are taught in required modules. The degree program places special emphasis on methods, which are taught in depth in complementary basic research modules, applied modules, a project seminar, and a thesis module.</p>
-<p>Implementing open and FAIR teaching development will give students the opportunity to participate in the development of their own teaching materials. While students can view and directly contribute to the teaching materials as they are developed, they can also participate in the development of educational resources by contributing feedback on the course contents, for example by sharing ideas or reporting issues through a dedicated feedback system that is integrated with the course contents. For example, in a previous course a student reported a problem with an online quiz that was used to assess course participant’s knowledge about the learning materials (see <a href="https://github.com/lnnrtwttkhn/version-control-survey/issues/28">here</a>). The course instructors could then respond to the issue directly and link it to the update in the course materials that eventually solved the issue. This provides transparency to the student who can see when and how the issue was resolved but also allows future users of the materials to establish provenance and understand why a certain change in the course materials was implemented. This also enables students to reflect on increasingly digital and data-driven economic and societal processes and thus promotes participatory “self-empowered citizenship”.</p>
-<p>As described in the <a href="#implementation-plan">implementation plan</a>, we will pilot the introduction of FAIR and reproducible teaching methods, in courses that focus on teaching digital research skills that will be offered to MSc and PhD students at the Institute of Psychology. We will evaluate the impact of our proposed approach from a student approach that will complement the feedback from the teachers (see above) and help us to further refine the proposed teaching approach.</p>
-</section>
-<section id="financial-needs" class="level2">
-<h2 class="anchored" data-anchor-id="financial-needs">Financial Needs</h2>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 2%">
-<col style="width: 57%">
-<col style="width: 8%">
-<col style="width: 23%">
-<col style="width: 7%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Duration</th>
-<th style="text-align: right;">Costs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">Student Research Assistant (MSc level) for 30 hours / month</td>
-<td style="text-align: left;">HR</td>
-<td style="text-align: left;">15.08.2024 to 31.08.2025</td>
-<td style="text-align: right;">7573.88</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">Student Teaching Assistant (MSc level) for 2 SWS / month</td>
-<td style="text-align: left;">HR</td>
-<td style="text-align: left;">14.10.24 to 01.02.25</td>
-<td style="text-align: right;">2256.99</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">License for Plausible.io</td>
-<td style="text-align: left;">License</td>
-<td style="text-align: left;">01.09.2024 to 31.08.2025</td>
-<td style="text-align: right;">107.10</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">Travel by train to Berlin for TURN 2024 conference</td>
-<td style="text-align: left;">Travel</td>
-<td style="text-align: left;">14.11.2024 to 15.11.2024</td>
-<td style="text-align: right;">60.00</td>
-</tr>
-</tbody>
-</table>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Overview of actual implementation
 </div>
 </div>
-<p>In sum, the expected <strong>total costs of the project</strong> are <strong>~ 10000 Euro</strong>.</p>
-<p>We provide additional justification for the financial needs below.</p>
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="emoji" data-emoji="white_check_mark">✅</span> We developed a framework for FAIR and reproducible teaching using <a href="{{< var links.quarto-link >}}">Quarto</a> and <a href="{{< var links.git-link >}}">Git</a>, building on and extending existing documentation resources</li>
+<li><span class="emoji" data-emoji="white_check_mark">✅</span> We created workshop materials implementing the framework, publicly available at <a href="https://lennartwittkuhn.com/fair-teaching-course/">https://lennartwittkuhn.com/fair-teaching-course/</a></li>
+<li><span class="emoji" data-emoji="white_check_mark">✅</span> We offered a full-day training workshop to research staff at University of Hamburg to implement the framework in their own teaching</li>
+<li><span class="emoji" data-emoji="x">❌</span> We did not systematically evaluate the impact of the teaching framework (e.g., using surveys and interviews with teachers and students)</li>
+</ul>
+<p>For more details on the original implementation plan, please see the <a href="https://lennartwittkuhn.com/fair-teaching-proposal/">project proposal</a>.</p>
+</div>
+</div>
+<p>Overall, the project was implemented largely as planned, with some necessary adjustments. Thanks to the funding provided, we were able to hire Mr.&nbsp;Reza Hakimazar, a Master’s student in Psychology at the University of Hamburg, as a research assistant (“Wissenschaftliche Hilfskraft”) starting on September 1, 2024. As originally proposed, we first developed a framework for creating open educational resources (OER) in a transparent and reproducible manner, aligned with the FAIR principles <span class="citation" data-cites="wilkinson2016">(<a href="#ref-wilkinson2016" role="doc-biblioref"><span class="nocase">Wilkinson et al.</span>, 2016</a>)</span>, using the open-source software tools Quarto and Git.</p>
+<p>Regarding the framework documentation, we started with but eventually decided against creating a new standalone manual and instead focused our efforts on building upon two already extensive and high-quality existing resources: the official <a href="https://quarto.org/">Quarto documentation</a> and the <a href="https://lennartwittkuhn.com/version-control-book/">Version Control Book</a>, an open educational resource on Git developed within our research group <span class="citation" data-cites="plomp2023">(for preparatory work, see e.g., <a href="#ref-plomp2023" role="doc-biblioref">Plomp &amp; Wittkuhn, 2023</a>)</span>. This decision reflected a commitment to avoiding duplication of effort and ensuring that our contributions would improve existing resources. This approach is actually in line with the very principles of FAIR and reproducible science, which emphasize building upon and contributing to existing resources rather than creating isolated, redundant materials. We then focused on developing concrete workshop materials that implemented the framework, which were designed to be openly accessible and reusable by others. The resulting workshop materials are publicly accessible at <a href="https://lennartwittkuhn.com/fair-teaching-course/">https://lennartwittkuhn.com/fair-teaching-course/</a>. Their development followed our “working-in-the-open” philosophy, with the entire process made transparent and trackable on GitHub.</p>
+<p>We implemented the developed framework in a full-day workshop held at the University of Hamburg at the end of the winter semester 2025/26. The workshop was designed for research staff at the Institute of Psychology and introduced participants to the use of Quarto and Git, with a particular focus on creating open educational resources such as websites, and presentations. This enabled teaching staff to apply FAIR principles and reproducible methods in their own instructional materials.</p>
+<p>Originally, we also planned to evaluate the effectiveness of the approach by collecting feedback from both students and instructors through online surveys and structured interviews. The resulting documentation was intended to inform a set of concrete recommendations for implementing FAIR and reproducible teaching practices, with the goal of making them reusable by educators and institutions beyond the project team. However, as noted above and further explained below, this part of the project could not be realized within the current funding period.</p>
 </section>
-<section id="justification" class="level3">
-<h3 class="anchored" data-anchor-id="justification">Justification</h3>
-<section id="regarding-1-student-research-assistant-msc-level-for-30-hours-month" class="level4">
-<h4 class="anchored" data-anchor-id="regarding-1-student-research-assistant-msc-level-for-30-hours-month">Regarding 1 (Student Research Assistant (MSc level) for 30 hours / month):</h4>
-<p>The student research assistant (RA) will help to create new and adapt existing learning materials focused on the development of FAIR and reproducible teaching materials. Specifically, the student RA will support the development of learning materials for Quarto and Git, the tools that are at the center of our approach. In addition, the student RA will contriubute to the development and analysis surveys and quizzes that allow to collect continuous feedback from both students and teachers to address any challenges or identify opportunities for improvement.</p>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>Overall, the project was implemented largely as planned, with some necessary adjustments. In relation to our original project proposal, the following deviations and timeline adjustments occurred:</p>
+<ol type="1">
+<li><p><strong>Change in Project Responsibility:</strong> Due to a job change, the project’s principal investigator transferred responsibility for the project at the end of April 2025 - with the foundation’s approval - to the research group leader Prof.&nbsp;Nicolas Schuck.</p></li>
+<li><p><strong>Rescheduling of Workshop:</strong> The workshop, initially planned for the Winter Semester 2024/25, was postponed to the end of the Winter Semester 2025/26. This shift was necessary due to the change in project leadership and because the original timeline proved overly optimistic. In particular, substantial progress could only begin once funding was secured and Mr.&nbsp;Reza Hakimazar started his role as research assistant.</p></li>
+<li><p><strong>Scope Adjustment: Framework Documentation:</strong> Rather than developing a new standalone manual, we chose to extend and build upon existing, well-established resources — the Quarto documentation and the Version Control Book. This decision allowed us to invest our efforts more effectively, avoid duplication, and contribute to existing resources.</p></li>
+<li><p><strong>Postponement of Conference Participation</strong> We had planned to present initial results at the TURN 2024 conference and allocate part of the project funds for this purpose. However, we decided to delay dissemination until a later stage, when the project outcomes would be more mature. At the conclusion of the current funding period, it remains unclear to what extent the results will be presented to a broader academic audience, beyond the public sharing of the workshop materials.</p></li>
+<li><p><strong>Evaluation Activities Not Realized</strong> Originally, we intended to evaluate the effectiveness of the framework by collecting feedback from both students and instructors through online surveys and structured interviews. The insights gathered were meant to support a set of concrete, reusable recommendations for implementing FAIR and reproducible teaching practices. Unfortunately, this component could not be realized within the current funding period due to time constraints. In particular, it was not possible during the project period to follow up on whether workshop participants subsequently implemented the taught practices in their own teaching.</p></li>
+</ol>
 </section>
-<section id="regarding-2-student-teaching-assistant-msc-level-for-2-sws-month" class="level4">
-<h4 class="anchored" data-anchor-id="regarding-2-student-teaching-assistant-msc-level-for-2-sws-month">Regarding 2 (Student Teaching Assistant (MSc level) for 2 SWS / month):</h4>
-<p>A teaching assistant (TA) is crucial for providing individualized support, timely feedback, and technical troubleshooting to course participants. The TA supports the instructional content, manages assessments during class, and ensures a consistent learning experience for course participants with varying levels of familiarity with the learning concepts.</p>
-</section>
-<section id="regarding-3-license-for-plausible.io" class="level4">
-<h4 class="anchored" data-anchor-id="regarding-3-license-for-plausible.io">Regarding 3 (License for Plausible.io):</h4>
-<p>All course materials will be shared as publicly accessible websites hosted via <a href="https://pages.github.com/">GitHub Pages</a>. We will use website analytics to gain insights into reach and dissemination of the teaching materials. These insights will allow us to better understand how users engage with our online learning materials and derive opportunities for improvements. We will use <a href="https://plausible.io/">Plausible</a>, which provides “intuitive, lightweight and open source web analytics”, does not use cookies and is fully compliant with GDPR, CCPA and PECR. A subscription plan with a monthly quota of up to 10k pageviews for 1 year will be selected.</p>
-</section>
-<section id="regarding-4-travel-by-train-to-berlin-for-turn-2024-conference" class="level4">
-<h4 class="anchored" data-anchor-id="regarding-4-travel-by-train-to-berlin-for-turn-2024-conference">Regarding 4 (Travel by train to Berlin for TURN 2024 conference):</h4>
-<p>We submitted an abstract to the <a href="https://turn-conference.org/">TURN 2024 conference</a>, taking place in Berlin from 14.11.2024 to 15.11.2024, to give a talk about the proposed teaching approach. The funding will cover travel from Hamburg to Berlin (and back) by train. Accommodation can be arranged privately.</p>
-</section>
+<section id="outlook" class="level3">
+<h3 class="anchored" data-anchor-id="outlook">Outlook</h3>
+<p>All materials developed as part of the project will remain openly accessible. In line with the principles of FAIR and reproducible teaching, they can be reused, adapted, and extended by others. The workshop materials are freely available at <a href="https://lennartwittkuhn.com/fair-teaching-course/">https://lennartwittkuhn.com/fair-teaching-course/</a>, and the Version Control Book — extended as part of this project — continues to be openly accessible at <a href="https://lennartwittkuhn.com/version-control-book/">https://lennartwittkuhn.com/version-control-book/</a>. The workshop held at the Institute of Psychology has laid the groundwork for further adoption of these principles by other educators within the institution. There is also the potential for the workshop format to be continued and repeated in the future, based on demand and interest. We believe that, thanks to the open approach taken throughout the project, the results will have a lasting impact beyond the original funding period. The support provided by the funding was essential in enabling the development and dissemination of these sustainable teaching practices.</p>
 </section>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>This work was funded by the “Claussen-Simon Fund for Science &amp; Higher Education” by the <a href="https://www.claussen-simon-stiftung.de/">Claussen-Simon Foundation</a>.</p>
 <p>We thank Alexa Ruel (<a href="https://orcid.org/0000-0003-4119-0659" class="uri">https://orcid.org/0000-0003-4119-0659</a>) and Konrad Pagenstedt (<a href="https://orcid.org/0009-0000-6867-1546" class="uri">https://orcid.org/0009-0000-6867-1546</a>) for helpful feedback on a previous version of this proposal.</p>
 </section>
 <section id="references" class="level2">
@@ -346,19 +289,19 @@ Figure&nbsp;1: Screenshot of the OpenOlat portal when filtering for educational 
 Baker, M. (2016). 1,500 scientists lift the lid on reproducibility. <em>Nature</em>, <em>533</em>(7604), 452–454. <a href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>
 </div>
 <div id="ref-crüwell2023" class="csl-entry" role="listitem">
-Crüwell, S., Apthorp, D., Baker, B. J., Colling, L., Elson, M., Geiger, S. J., Lobentanzer, S., Monéger, J., Patterson, A., Schwarzkopf, D. S., Zaneva, M., &amp; Brown, N. J. L. (2023). What<span>’</span>s in a Badge? A Computational Reproducibility Investigation of the Open Data Badge Policy in One Issue of <span><em>Psychological Science</em></span>. <em>Psychological Science</em>, <em>34</em>(4), 512–522. <a href="https://doi.org/10.1177/09567976221140828">https://doi.org/10.1177/09567976221140828</a>
+Crüwell, S., Apthorp, D., Baker, B. J., Colling, L., Elson, M., Geiger, S. J., Lobentanzer, S., Monéger, J., Patterson, A., Schwarzkopf, D. S., Zaneva, M., &amp; Brown, N. J. L. (2023). What<span>’</span>s in a badge? A computational reproducibility investigation of the open data badge policy in one issue of <span><em>Psychological Science</em></span>. <em>Psychological Science</em>, <em>34</em>(4), 512–522. <a href="https://doi.org/10.1177/09567976221140828">https://doi.org/10.1177/09567976221140828</a>
 </div>
 <div id="ref-garcia2020" class="csl-entry" role="listitem">
 Garcia, L., Batut, B., Burke, M. L., Kuzak, M., Psomopoulos, F., Arcila, R., Attwood, T. K., Beard, N., Carvalho-Silva, D., Dimopoulos, A. C., Angel, V. D. del, Dumontier, M., Gurwitz, K. T., Krause, R., McQuilton, P., Le Pera, L., Morgan, S. L., Rauste, P., Via, A., … Palagi, P. M. (2020). Ten simple rules for making training materials FAIR. <em>PLOS Computational Biology</em>, <em>16</em>(5), e1007854. <a href="https://doi.org/10.1371/journal.pcbi.1007854">https://doi.org/10.1371/journal.pcbi.1007854</a>
 </div>
 <div id="ref-hardwicke2021" class="csl-entry" role="listitem">
-Hardwicke, T. E., Bohn, M., MacDonald, K., Hembacher, E., Nuijten, M. B., Peloquin, B. N., deMayo, B. E., Long, B., Yoon, E. J., &amp; Frank, M. C. (2021). Analytic reproducibility in articles receiving open data badges at the journal <span><em>Psychological Science</em></span> : an observational study. <em>Royal Society Open Science</em>, <em>8</em>(1). <a href="https://doi.org/10.1098/rsos.201494">https://doi.org/10.1098/rsos.201494</a>
+<span class="nocase">Hardwicke, T. E., Bohn, M., MacDonald, K., Hembacher, E., Nuijten, M. B., Peloquin, B. N., deMayo, B. E., Long, B., Yoon, E. J., &amp; Frank, M. C.</span> (2021). Analytic reproducibility in articles receiving open data badges at the journal <span><em>Psychological Science</em></span> : An observational study. <em>Royal Society Open Science</em>, <em>8</em>(1). <a href="https://doi.org/10.1098/rsos.201494">https://doi.org/10.1098/rsos.201494</a>
 </div>
 <div id="ref-munafò2017" class="csl-entry" role="listitem">
 Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J. J., &amp; Ioannidis, J. P. A. (2017). A manifesto for reproducible science. <em>Nature Human Behaviour</em>, <em>1</em>(1). <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>
 </div>
 <div id="ref-obels2020" class="csl-entry" role="listitem">
-Obels, P., Lakens, D., Coles, N. A., Gottfried, J., &amp; Green, S. A. (2020). Analysis of Open Data and Computational Reproducibility in Registered Reports in Psychology. <em>Advances in Methods and Practices in Psychological Science</em>, <em>3</em>(2), 229–237. <a href="https://doi.org/10.1177/2515245920918872">https://doi.org/10.1177/2515245920918872</a>
+Obels, P., Lakens, D., Coles, N. A., Gottfried, J., &amp; Green, S. A. (2020). Analysis of open data and computational reproducibility in registered reports in psychology. <em>Advances in Methods and Practices in Psychological Science</em>, <em>3</em>(2), 229–237. <a href="https://doi.org/10.1177/2515245920918872">https://doi.org/10.1177/2515245920918872</a>
 </div>
 <div id="ref-opensciencecollaboration2015" class="csl-entry" role="listitem">
 Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. <em>Science</em>, <em>349</em>(6251). <a href="https://doi.org/10.1126/science.aac4716">https://doi.org/10.1126/science.aac4716</a>
@@ -373,20 +316,14 @@ The Turing Way Community. (2022). <em><span>The Turing Way</span>: A handbook fo
 Wicherts, J. M., Borsboom, D., Kats, J., &amp; Molenaar, D. (2006). The poor availability of psychological research data for reanalysis. <em>American Psychologist</em>, <em>61</em>(7), 726–728. <a href="https://doi.org/10.1037/0003-066x.61.7.726">https://doi.org/10.1037/0003-066x.61.7.726</a>
 </div>
 <div id="ref-wilkinson2016" class="csl-entry" role="listitem">
-Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., Silva Santos, L. B. da, Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., … Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. <em>Scientific Data</em>, <em>3</em>(1). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>
+<span class="nocase">Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., Silva Santos, L. B. da, Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., … Mons, B.</span> (2016). The FAIR guiding principles for scientific data management and stewardship. <em>Scientific Data</em>, <em>3</em>(1). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>
 </div>
 </div>
 
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>(Source: <a href="https://en.wikipedia.org/wiki/GitHub">Wikipedia</a>)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script defer="" data-domain="lennartwittkuhn.com/fair-teaching-proposal" src="https://plausible.io/js/script.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -439,13 +376,14 @@ Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., B
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
