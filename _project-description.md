@@ -20,10 +20,10 @@ For more details on the original implementation plan, please see the [project pr
 :::
 
 ::: {.callout-tip title="Overview of actual implementation"}
-- :white_check_mark: We developed a framework for FAIR and reproducible teaching using {{< var links.quarto >}} and {{< var links.git >}}, building on and extending existing documentation resources
-- :white_check_mark: We created workshop materials implementing the framework, publicly available at [{{< var links.course-link >}}]({{< var links.course-link >}})
-- :white_check_mark: We offered a full-day training workshop to research staff at University of Hamburg to implement the framework in their own teaching
-- :x: We did not systematically evaluate the impact of the teaching framework (e.g., using surveys and interviews with teachers and students)
+- ✅ We developed a framework for FAIR and reproducible teaching using {{< var links.quarto >}} and {{< var links.git >}}, building on and extending existing documentation resources
+- ✅ We created workshop materials implementing the framework, publicly available at [{{< var links.course-link >}}]({{< var links.course-link >}})
+- ✅ We offered a full-day training workshop to research staff at University of Hamburg to implement the framework in their own teaching
+- ❌ We did not systematically evaluate the impact of the teaching framework (e.g., using surveys and interviews with teachers and students)
 
 For more details on the original implementation plan, please see the [project proposal]({{< var links.proposal-link >}}).
 :::
